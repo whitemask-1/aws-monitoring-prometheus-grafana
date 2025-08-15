@@ -304,14 +304,5 @@ docker image prune
 * Capacity planning
 * DevOps observability workflows
 
----
-
-## ⏭️ Next Steps
-
-* Add custom metrics to your apps
-* Set up logging with ELK
-* Add tracing with Jaeger
-* Explore SLI/SLOs
-* Move on to **Project 5: Multi-Environment Setup**
 
 🎉 Congratulations! You now have professional-grade monitoring!
