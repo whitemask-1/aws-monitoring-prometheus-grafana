@@ -1,0 +1,20 @@
+groups:
+  - name: webapp_alerts
+    rules:
+      - alert: WebAppDown
+        expr: up{job="my-webapp-local"} == 0
+        for: 1m
+        labels:
+          severity: critical
+        annotations:
+          summary: "Web application is down"
+          description: "The web application has been down for more than 1 minute."
+
+      - alert: HighCPUUsage
+        expr: 100 - (avg by(instance) (rate(node_cpu_seconds_total{mode="idle"}[2m])) * 100) > 80
+        for: 2m
+        labels:
+          severity: warning
+        annotations:
+          summary: "High CPU usage detected"
+          description: "CPU usage is above 80% for more than 2 minutes."

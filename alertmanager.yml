@@ -1,0 +1,13 @@
+global:
+  resolve_timeout: 5m
+
+route:
+  receiver: 'default'
+
+receivers:
+  - name: 'default'
+    # Example: send alerts to email, Slack, etc.
+    # email_configs:
+    #   - to: 'your@email.com'
+
+# You can add more routes and receivers as needed
